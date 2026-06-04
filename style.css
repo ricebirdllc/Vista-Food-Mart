@@ -1379,6 +1379,7 @@ footer {
   animation: fadeIn 0.8s ease forwards;
 }
 /* Responsive Media Queries */
+/* Responsive Media Queries */
 @media (max-width: 1024px) {
   #hero {
     grid-template-columns: 1fr;
@@ -1421,84 +1422,29 @@ footer {
   }
 }
 
+
+/* =========================
+   MOBILE NAVBAR FIX (MAIN)
+   ========================= */
 @media (max-width: 768px) {
+
   html {
     font-size: 15px;
   }
-/* ===== MOBILE NAVBAR: NEW LINE + HORIZONTAL SCROLL ===== */
 
-.nav-container {
-  flex-wrap: wrap; /* allows new line */
-  padding: 0.75rem 1rem;
-}
-
-/* First row (logo + utils stay top row) */
-.logo-wrapper {
-  flex: 1 1 auto;
-  height: 32px;
-}
-
-.nav-utils {
-  flex: 0 0 auto;
-  gap: 0.6rem;
-}
-
-/* Second row (nav menu goes full width) */
-.nav-menu {
-  flex: 1 0 100%;          /* forces new line */
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 1rem;
-
-  margin-top: 0.6rem;
-  padding-bottom: 0.4rem;
-
-  overflow-x: auto;        /* horizontal scroll */
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Keep links compact */
-.nav-link {
-  font-size: 0.8rem;
-  padding: 0.25rem 0.5rem;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-/* optional: hide scrollbar */
-.nav-menu::-webkit-scrollbar {
-  display: none;
-}
-.nav-menu {
-  scrollbar-width: none;
-}
-  /* ===== CLEAN COMPACT NAVBAR (NO POPUP MENU) ===== */
-
+  /* NAV CONTAINER: 2 ROW LAYOUT */
   .nav-container {
+    flex-wrap: wrap;        /* allows new line */
     padding: 0.75rem 1rem;
+    gap: 0.5rem;
   }
 
+  /* LOGO SMALLER */
   .logo-wrapper {
     height: 32px;
   }
 
-  .nav-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.9rem;
-    font-size: 0.85rem;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .nav-link {
-    font-size: 0.8rem;
-    padding: 0.3rem 0;
-  }
-
+  /* UTILS (theme + status) stay top row right */
   .nav-utils {
     gap: 0.6rem;
     margin-right: 0.5rem;
@@ -1509,8 +1455,47 @@ footer {
     height: 36px;
   }
 
-  /* ===== GENERAL MOBILE SPACING ===== */
+  /* NAV MENU MOVES TO SECOND LINE */
+  .nav-menu {
+    flex: 1 0 100%;          /* forces new row */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+    gap: 0.9rem;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    margin-top: 0.6rem;
+    padding-bottom: 0.4rem;
+
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  /* NAV ITEMS */
+  .nav-menu li {
+    flex: 0 0 auto;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  /* HIDE SCROLLBAR */
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-menu {
+    scrollbar-width: none;
+  }
+
+  /* GENERAL MOBILE SPACING */
   section {
     padding: 5rem 1.5rem 3rem 1.5rem;
   }
@@ -1538,7 +1523,12 @@ footer {
   }
 }
 
+
+/* =========================
+   EXTRA SMALL DEVICES
+   ========================= */
 @media (max-width: 480px) {
+
   .hero-title {
     font-size: 2.25rem;
   }
@@ -1556,5 +1546,4 @@ footer {
     padding: 0.4rem 0.9rem;
   }
 }
-
 }
