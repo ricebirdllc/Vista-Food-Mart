@@ -162,7 +162,16 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateLiveHours, 60000);
 
   // --- MOBILE MENU (disabled - toggle button removed) ---
+// ===== NAV HOURS STATUS DOT =====
+const navStatusDot = document.querySelector('.nav-status-dot');
 
+if (navStatusDot) {
+  if (isOpen) {
+    navStatusDot.classList.add('open');
+  } else {
+    navStatusDot.classList.remove('open');
+  }
+}
   // --- SCROLL EFFECTS ---
   function initScrollEffects() {
     window.addEventListener('scroll', () => {
