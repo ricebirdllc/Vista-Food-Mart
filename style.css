@@ -1523,7 +1523,43 @@ footer {
   }
 }
 
+/* ===== FIX HERO COLLAGE MOBILE DISPLAY ===== */
+@media (max-width: 768px) {
 
+  .hero-visual {
+    height: auto !important;
+    max-width: 100% !important;
+    padding: 0 1rem;
+  }
+
+  .collage-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .collage-photo {
+    position: relative !important;
+    width: 100% !important;
+    height: 160px !important;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .collage-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* optional: make one image full width for better look */
+  .collage-photo.photo-2 {
+    grid-column: span 2;
+    height: 200px;
+  }
+}
 /* =========================
    EXTRA SMALL DEVICES
    ========================= */
