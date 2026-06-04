@@ -1358,7 +1358,6 @@ footer {
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
 }
-
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
   #hero {
@@ -1407,32 +1406,42 @@ footer {
     font-size: 15px;
   }
 
-  /* .menu-toggle {
-    display: block;
-  } */
+  /* ===== CLEAN COMPACT NAVBAR (NO POPUP MENU) ===== */
 
-  /* .nav-menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: var(--bg-2);
-    border-bottom: 1px solid var(--border-color);
-    padding: 2rem;
-    gap: 1.5rem;
-    box-shadow: var(--shadow-lg);
-    transition: var(--transition);
-    z-index: 99;
+  .nav-container {
+    padding: 0.75rem 1rem;
   }
 
-  .nav-menu.active {
-    top: 70px;
-  } */
+  .logo-wrapper {
+    height: 32px;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.9rem;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+  }
 
   .nav-utils {
-    margin-right: 1rem;
+    gap: 0.6rem;
+    margin-right: 0.5rem;
   }
+
+  .theme-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ===== GENERAL MOBILE SPACING ===== */
 
   section {
     padding: 5rem 1.5rem 3rem 1.5rem;
@@ -1478,5 +1487,6 @@ footer {
     font-size: 0.8rem;
     padding: 0.4rem 0.9rem;
   }
+}
 
 }
