@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- INITIALIZATION ---
   initTheme();
   updateLiveHours();
-  initScrollEffects();
+  // initScrollEffects();
   // initProductCatalog() and initGallery() are called after galleryImages is declared below
-  initReviewsSlider();
+  // initReviewsSlider();
 
   // Set current year in footer
   if (currentYearSpan) {
