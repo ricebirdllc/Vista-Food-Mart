@@ -1411,7 +1411,7 @@ footer {
     display: block;
   } */
 
-  .nav-menu {
+  /* .nav-menu {
     position: fixed;
     top: -100%;
     left: 0;
@@ -1428,7 +1428,7 @@ footer {
 
   .nav-menu.active {
     top: 70px;
-  }
+  } */
 
   .nav-utils {
     margin-right: 1rem;
@@ -1478,7 +1478,5 @@ footer {
     font-size: 0.8rem;
     padding: 0.4rem 0.9rem;
   }
-   .nav-menu {
-  display: none !important;
-}
+
 }
