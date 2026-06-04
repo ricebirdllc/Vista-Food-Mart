@@ -2,7 +2,7 @@
  * Vista Food Mart - Main Application Script
  * Handles Theme Toggle, Live Hours Calculation, Product Filtering, Photo Lightbox, Reviews Slider.
  */
-
+navMenu.classList.remove('active');
 document.addEventListener('DOMContentLoaded', () => {
   // --- STATE ---
   let activeTheme = localStorage.getItem('theme') || 'dark';
