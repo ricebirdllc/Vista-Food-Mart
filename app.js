@@ -211,11 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: "./photo/Essentials/house items.png", category: "essentials", title: "Household Supplies", desc: "Daily cleaning products and home utilities." },
     { src: "./photo/Essentials/stationary battery.png", category: "essentials", title: "Stationery & Batteries", desc: "Office/school supplies and all sizes of batteries." },
     { src: "./photo/Essentials/miscellanoeous.png", category: "essentials", title: "General Merchandise", desc: "Various hardware, chargers, and utility goods." },
-    // SNACKS - 4 photos (in /photo/snacks/ — lowercase)
-    { src: "./photo/snacks/big chips.png", category: "snacks", title: "Snacks Display", desc: "A large variety of potato chips and savory snacks." },
-    { src: "./photo/snacks/chips big.png", category: "snacks", title: "Potato Chips Row", desc: "All your favorite classic and spicy chips in stock." },
-    { src: "./photo/snacks/ice cream.png", category: "snacks", title: "Frozen Ice Creams", desc: "Refreshing ice creams and frozen desserts." },
-    { src: "./photo/snacks/jams.png", category: "snacks", title: "Jams & Sweet Spreads", desc: "Sweet jams, honey, and specialty sauces." },
+    // Snacks - 4 photos (in /photo/Snacks/ — lowercase)
+    { src: "./photo/Snacks/big chips.png", category: "Snacks", title: "Snacks Display", desc: "A large variety of potato chips and savory Snacks." },
+    { src: "./photo/Snacks/chips big.png", category: "Snacks", title: "Potato Chips Row", desc: "All your favorite classic and spicy chips in stock." },
+    { src: "./photo/Snacks/ice cream.png", category: "Snacks", title: "Frozen Ice Creams", desc: "Refreshing ice creams and frozen desserts." },
+    { src: "./photo/Snacks/jams.png", category: "Snacks", title: "Jams & Sweet Spreads", desc: "Sweet jams, honey, and specialty sauces." },
     // BEVERAGES - 4 photos (in /photo/Beverages/)
     { src: "./photo/Beverages/cold drinks.png", category: "beverages", title: "Cold Drinks Cooler", desc: "Ice-cold sodas, sports drinks, and energy drinks." },
     { src: "./photo/Beverages/buzzball.png", category: "beverages", title: "BuzzBallz Selection", desc: "Popular premixed cocktails and party drinks." },
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Category icons for catalog cards
   const catalogCategoryIcons = {
-    snacks: 'fa-cookie-bite',
+    Snacks: 'fa-cookie-bite',
     beverages: 'fa-glass-cheers',
     tobacco: 'fa-smoking',
     services: 'fa-concierge-bell',
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', () => {
       author: "Shalarith Sundras",
       stars: 5,
       meta: "Verified Customer · Google Review",
-      text: "Great little selection, friendly staff even in the late hours. Great to have for the neighborhood! Perfect one-stop shop for both snacks and international spices."
+      text: "Great little selection, friendly staff even in the late hours. Great to have for the neighborhood! Perfect one-stop shop for both Snacks and international spices."
     },
     {
       author: "Nextdoor Neighbor",
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
       author: "Fort Worth Local",
       stars: 5,
       meta: "Local Guide · Google Review",
-      text: "Super convenient and clean space. Excellent selection of beverages, Mexican foods, snacks, and basic utilities. Friendly neighborhood customer service."
+      text: "Super convenient and clean space. Excellent selection of beverages, Mexican foods, Snacks, and basic utilities. Friendly neighborhood customer service."
     }
   ];
 
