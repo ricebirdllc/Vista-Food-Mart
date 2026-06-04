@@ -1478,4 +1478,7 @@ footer {
     font-size: 0.8rem;
     padding: 0.4rem 0.9rem;
   }
+   .nav-menu {
+  display: none !important;
+}
 }
