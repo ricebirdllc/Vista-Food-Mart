@@ -1,0 +1,42 @@
+Vista Food Mart - Photo Folder Image List (27 Total)
+=====================================================
+
+
+#   | File Name                              | Category
+----|----------------------------------------|----------------
+1   | big chips.png                          | snacks
+2   | big logo.jpg                           | exterior
+3   | building outside.jpg                   | exterior
+4   | buildong look.jpg                      | exterior
+5   | buzzball.png                           | beverages
+6   | chips big.png                          | snacks
+7   | cigerellos.png                         | tobacco-vape
+8   | cigratte.png                           | tobacco-vape
+9   | cold drinks.png                        | beverages
+10  | counter.png                            | services
+11  | hard drinks.png                        | beverages
+12  | hard2.png                              | beverages
+13  | house items.png                        | essentials
+14  | ice cream.png                          | snacks
+15  | Ice machine.png                        | services
+16  | indian oil rice.png                    | indian-grocery
+17  | indian spices.png                      | indian-grocery
+18  | jams.png                               | indian-grocery
+19  | kitchen.png                            | services
+20  | logo.jpg                               | exterior
+21  | lotto.png                              | services
+22  | milk eggs.png                          | essentials
+23  | miscellanoeous.png                     | essentials
+24  | stationary battery.png                 | essentials
+25  | vape.jpeg                              | tobacco-vape
+26  | vape3.jpeg                             | tobacco-vape
+27  | whole building looks from outside.jpg  | exterior
+
+Category Summary:
+  exterior       - 5 photos
+  indian-grocery - 3 photos
+  essentials     - 4 photos
+  snacks         - 3 photos
+  beverages      - 4 photos
+  tobacco-vape   - 4 photos
+  services       - 4 photos
