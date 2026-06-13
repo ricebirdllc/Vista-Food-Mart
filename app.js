@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isHalfDay = halfDays.includes(weekday);
 
     const isOpen = (isFullDay && hour >= 7 && hour < 23) ||
-      (isHalfDay && hour >= 7 && hour < 12);
+      (isHalfDay && hour >= 7 );
 
     const badges = document.querySelectorAll('.live-status-badge');
     badges.forEach(badge => {
@@ -125,11 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
         msg = `Open Today until 12:00 AM`;
       }
     } else {
-      if (weekday === 'Sat' && hour >= 12) {
-        msg = `Closed (Opens Sunday at 7:00 AM)`;
-      } else if (weekday === 'Fri' && hour >= 12) {
-        msg = `Closed (Opens Tomorrow at 7:00 AM)`;
-      } else if (weekday === 'Thu' && hour >= 23) {
+     if (weekday === 'Sat' && hour < 7) {
+  msg = `Closed (Opens Today at 7:00 AM)`;
+} else if (weekday === 'Thu' && hour >= 23) {
         msg = `Closed (Opens Tomorrow at 7:00 AM)`;
       } else if (hour < 7) {
         msg = `Closed (Opens Today at 7:00 AM)`;
