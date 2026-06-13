@@ -7,17 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- STATE ---
   let activeTheme = localStorage.getItem('theme') || 'dark';
   let currentReviewIndex = 0;
-  let activeLightboxIndex = 0;
 
   // --- DOM ELEMENTS ---
   const htmlElement = document.documentElement;
   const themeToggleBtn = document.getElementById('theme-toggle');
   const headerElement = document.querySelector('header');
-  const navMenu = document.getElementById('nav-menu');
   const openTimeSpan = document.getElementById('open-time-msg');
   const currentYearSpan = document.getElementById('current-year');
 
-  // --- INITIALIZATION ---
+  // --- INIT ---
   initTheme();
   updateLiveHours();
   initScrollEffects();
@@ -45,45 +43,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoSvg = document.querySelector('.logo-wrapper svg');
     if (!logoSvg) return;
 
-    if (activeTheme === 'light') {
-      logoSvg.classList.add('theme-light');
-      logoSvg.classList.remove('theme-dark');
-    } else {
-      logoSvg.classList.add('theme-dark');
-      logoSvg.classList.remove('theme-light');
-    }
+    logoSvg.classList.toggle('theme-light', activeTheme === 'light');
+    logoSvg.classList.toggle('theme-dark', activeTheme !== 'light');
   }
 
   // ---------------- TIME ----------------
   function getCentralTime() {
-    const options = {
-      timeZone: 'America/Chicago',
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: false,
-      weekday: 'short'
-    };
-
     try {
-      const formatter = new Intl.DateTimeFormat([], options);
-      const parts = formatter.formatToParts(new Date());
+      const now = new Date();
 
-      const data = {};
-      parts.forEach(p => (data[p.type] = p.value));
+      const weekday = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago',
+        weekday: 'short'
+      }).format(now);
 
-      return {
-        weekday: data.weekday,
-        hour: parseInt(data.hour, 10),
-        minute: parseInt(data.minute, 10)
-      };
+      const hour = parseInt(
+        new Intl.DateTimeFormat('en-US', {
+          timeZone: 'America/Chicago',
+          hour: '2-digit',
+          hour12: false
+        }).format(now),
+        10
+      );
+
+      return { weekday, hour };
     } catch (e) {
       const now = new Date();
       const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
       return {
         weekday: weekdays[now.getDay()],
-        hour: now.getHours(),
-        minute: now.getMinutes()
+        hour: now.getHours()
       };
     }
   }
@@ -92,37 +82,32 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateLiveHours() {
     const { weekday, hour } = getCentralTime();
 
-    const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu'];
-    const weekends = ['Fri', 'Sat'];
+    const isWeekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu'].includes(weekday);
+    const isWeekend = ['Fri', 'Sat'].includes(weekday);
 
-    const isWeekday = weekdays.includes(weekday);
-    const isWeekend = weekends.includes(weekday);
-
-    // ✅ FIXED LOGIC
+    // ✅ FIXED FINAL LOGIC (NO midnight bug)
     const isOpen =
       (isWeekday && hour >= 7 && hour < 23) ||
-      (isWeekend && hour >= 7 && hour < 24);
+      (isWeekend && hour >= 7 && hour <= 23);
 
-    // Update badges
-    const badges = document.querySelectorAll('.live-status-badge');
+    // ---------------- BADGES ----------------
+    document.querySelectorAll('.live-status-badge').forEach(badge => {
+      badge.classList.toggle('closed', !isOpen);
 
-    badges.forEach(badge => {
-      if (isOpen) {
-        badge.classList.remove('closed');
-        badge.innerHTML = `<span class="indicator-dot"></span>Open Now`;
-      } else {
-        badge.classList.add('closed');
-        badge.innerHTML = `<span class="indicator-dot"></span>Closed`;
-      }
+      const text = isOpen ? 'Open Now' : 'Closed';
+
+      badge.innerHTML = `
+        <span class="indicator-dot"></span>${text}
+      `;
     });
 
-    // Status message
+    // ---------------- MESSAGE ----------------
     let msg = '';
 
     if (isOpen) {
-      msg = isWeekday
-        ? 'Open Today until 11:00 PM'
-        : 'Open Today until 12:00 AM';
+      msg = isWeekend
+        ? 'Open Today until 12:00 AM'
+        : 'Open Today until 11:00 PM';
     } else {
       if (hour < 7) {
         msg = 'Closed (Opens Today at 7:00 AM)';
@@ -137,15 +122,13 @@ document.addEventListener('DOMContentLoaded', () => {
       openTimeSpan.textContent = msg;
     }
 
-    // Nav dot FIXED (no scope error)
+    // ---------------- NAV DOT SAFE ----------------
     const navStatusDot = document.querySelector('.nav-status-dot');
     if (navStatusDot) {
       navStatusDot.classList.toggle('open', isOpen);
     }
 
-    // Highlight current day
-    const dayRows = document.querySelectorAll('.store-hours-table tr');
-
+    // ---------------- HIGHLIGHT DAY ----------------
     const shortDays = {
       Sunday: 'Sun',
       Monday: 'Mon',
@@ -156,16 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
       Saturday: 'Sat'
     };
 
-    dayRows.forEach(row => {
+    document.querySelectorAll('.store-hours-table tr').forEach(row => {
       if (!row.cells.length) return;
 
       const dayName = row.cells[0].textContent.trim();
-
-      if (shortDays[dayName] === weekday) {
-        row.classList.add('current-day');
-      } else {
-        row.classList.remove('current-day');
-      }
+      row.classList.toggle('current-day', shortDays[dayName] === weekday);
     });
   }
 
@@ -174,11 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------------- SCROLL ----------------
   function initScrollEffects() {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        headerElement.classList.add('scrolled');
-      } else {
-        headerElement.classList.remove('scrolled');
-      }
+      headerElement?.classList.toggle('scrolled', window.scrollY > 50);
     });
   }
 
@@ -187,13 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       author: "Laxman Bista",
       stars: 5,
-      meta: "Google Review",
       text: "Awesome store with hard-to-find items."
     },
     {
       author: "Local Customer",
       stars: 5,
-      meta: "Google Review",
       text: "Great selection and friendly staff."
     }
   ];
