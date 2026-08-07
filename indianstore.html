@@ -153,12 +153,26 @@
           <!-- <a href="tel:+16822359744" class="btn btn-primary" aria-label="Call Store Now">
             <i class="fas fa-phone-alt"></i> Call (682) 235-9744
           </a> -->
-          <a href="https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-secondary">
+          <!-- <a href="https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-secondary">
             <i class="fas fa-map-marked-alt"></i> Apple Directions
-          </a>
-          <a href="https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-secondary">
+          </a> -->
+          <a href="https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244"
+   target="_blank"
+   rel="noopener"
+   class="btn btn-secondary"
+   onclick="return gtag_report_conversion('https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244');">
+    <i class="fas fa-map-marked-alt"></i> Apple Directions
+</a>
+          <!-- <a href="https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-secondary">
             <i class="fas fa-map-marked-alt"></i> Google Directions
-          </a>
+          </a> -->
+          <a href="https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244"
+   target="_blank"
+   rel="noopener"
+   class="btn btn-secondary"
+   onclick="return gtag_report_conversion('https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244');">
+    <i class="fas fa-map-marked-alt"></i> Google Directions
+</a>
           <!-- <a href="index.html" class="btn btn-secondary">
             <i class="fas fa-arrow-left"></i> Back to Main Site
           </a> -->
@@ -418,12 +432,28 @@
             <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Phone: <a href="tel:+16822359744" style="color: var(--primary); text-decoration: underline;">(682) 235-9744</a></p>
 
             <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-primary">
+              <!-- <a href="https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-primary">
                 <i class="fab fa-google"></i> Google Maps
-              </a>
-              <a href="https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-secondary">
+              </a> -->
+              <a href="https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244"
+   target="_blank"
+   rel="noopener"
+   class="btn btn-secondary"
+   onclick="return gtag_report_conversion('https://maps.google.com/?q=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244');">
+    <i class="fas fa-map-marked-alt"></i> Google Directions
+</a>
+              <!-- <a href="https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244" target="_blank" rel="noopener" class="btn btn-secondary">
                 <i class="fab fa-apple"></i> Apple Maps
-              </a>
+              </a> -->
+
+<a href="https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244"
+   target="_blank"
+   rel="noopener"
+   class="btn btn-secondary"
+   onclick="return gtag_report_conversion('https://maps.apple.com/?address=13008+Park+Vista+Blvd,+Fort+Worth,+TX+76244');">
+    <i class="fas fa-map-marked-alt"></i> Apple Directions
+</a>
+
             </div>
           </div>
         </div>
@@ -478,6 +508,24 @@
 
   <!-- Main JavaScript File -->
   <script src="app2.js"></script>
+
+  <script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18372101392/89hrCJ7myt0cEJCKwLhE',
+    'event_callback': callback
+  });
+
+  return false;
+}
+</script>
+
+
 </body>
 
 </html>
