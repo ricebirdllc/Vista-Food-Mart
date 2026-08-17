@@ -542,5 +542,165 @@ function gtag_report_conversion(url) {
 
 
 </body>
+<!-- =========================================================
+     VISTA FOOD MART - PERMANENT BOTTOM PROMO BAR
+     ========================================================= -->
+
+<style>
+  .vf-promo-bottom {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+    min-height: 48px;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px;
+
+    padding: 10px 16px !important;
+
+    background: linear-gradient(
+      90deg,
+      #b30000,
+      #e60000,
+      #b30000,
+      #e60000
+    );
+
+    background-size: 300% 100%;
+
+    color: #ffffff !important;
+    text-decoration: none !important;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.35);
+
+    z-index: 2147483647 !important;
+
+    animation: vfPromoGradient 4s ease infinite;
+  }
+
+  .vf-promo-bottom strong {
+    font-size: 18px;
+    color: #ffffff !important;
+  }
+
+  .vf-promo-fire {
+    font-size: 22px;
+    display: inline-block;
+
+    animation: vfPromoPulse 1.2s ease-in-out infinite;
+  }
+
+  .vf-promo-shop {
+    padding: 5px 10px;
+
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+
+    color: #ffffff !important;
+    font-size: 13px;
+    font-weight: 800;
+
+    white-space: nowrap;
+  }
+
+  @keyframes vfPromoGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes vfPromoPulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.18);
+    }
+  }
+
+  /* Prevent the promo bar from covering the bottom of the page */
+  body {
+    padding-bottom: 60px !important;
+  }
+
+  /* =========================
+     MOBILE
+     ========================= */
+
+  @media (max-width: 600px) {
+
+    .vf-promo-bottom {
+      min-height: 52px;
+
+      padding: 8px 10px !important;
+
+      gap: 7px;
+
+      font-size: 12px;
+
+      text-align: center;
+    }
+
+    .vf-promo-bottom strong {
+      font-size: 15px;
+    }
+
+    .vf-promo-fire {
+      font-size: 18px;
+    }
+
+    .vf-promo-shop {
+      padding: 4px 6px;
+
+      font-size: 11px;
+    }
+
+    body {
+      padding-bottom: 65px !important;
+    }
+  }
+</style>
+
+<a
+  href="promo.html"
+  class="vf-promo-bottom"
+  aria-label="25% off selected Indian groceries - shop the sale"
+>
+  <span class="vf-promo-fire">🔥</span>
+
+  <span>
+    <strong>25% OFF</strong>
+    SELECTED INDIAN GROCERIES
+  </span>
+
+  <span class="vf-promo-shop">
+    SHOP THE SALE →
+  </span>
+</a>
+
+<!-- =========================================================
+     END VISTA FOOD MART PROMO BAR
+     ========================================================= -->
 
 </html>
