@@ -116,52 +116,7 @@
 
       <!-- LOGO (LEFT) -->
       <a href="#" class="logo-wrapper" aria-label="Vista Food Mart Logo">
-        <!-- SVG Logo Inlined for color themes and scaling -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
-          <defs>
-            <linearGradient id="navPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#10b981" />
-              <stop offset="100%" stop-color="#059669" />
-            </linearGradient>
-            <linearGradient id="navGold" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fcd34d" />
-              <stop offset="100%" stop-color="#fbbf24" />
-            </linearGradient>
-            <style>
-              .logo-text-title {
-                font-family: 'Outfit', 'Inter', sans-serif;
-                font-size: 20px;
-                font-weight: 800;
-                letter-spacing: 1px;
-              }
-
-              .logo-text-sub {
-                font-family: 'Inter', sans-serif;
-                font-size: 11px;
-                font-weight: 600;
-                letter-spacing: 2px;
-              }
-
-              .theme-dark .logo-text-title {
-                fill: #ffffff;
-              }
-
-              .theme-light .logo-text-title {
-                fill: #0f172a;
-              }
-            </style>
-          </defs>
-
-          <g transform="translate(10, 8)">
-            <path d="M5,10 L20,0 L35,10 L35,30 C35,38 20,45 20,45 C20,45 5,38 5,30 Z" fill="url(#navPrimary)" />
-            <path d="M13,15 L20,29 L27,15" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <circle cx="20" cy="8" r="3.5" fill="url(#navGold)" />
-          </g>
-
-          <text x="65" y="28" class="logo-text-title" fill="#ffffff">VISTA</text>
-          <text x="65" y="44" class="logo-text-sub" fill="#fbbf24">FOOD MART</text>
-        </svg>
+        <img src="logo.png" alt="Vista Food Mart Logo" style="height: 52px; width: auto; object-fit: contain;" />
       </a>
 
       <!-- RIGHT SIDE (STATUS + THEME) -->
@@ -203,6 +158,93 @@
 
   <!-- Main Content -->
   <main>
+
+
+
+    <!-- Services / Highlights Section -->
+    <section id="services" class="glass-card"
+      style="border-radius: 0; border-left: none; border-right: none; margin-bottom: 3rem;">
+      <div class="section-header">
+        <span class="section-subtitle">What We Offer</span>
+        <h2 class="section-title">Your One-Stop Neighborhood Shop</h2>
+        <p class="section-desc">We stock a clean, organized space with everything you need, matching high-quality local
+          essentials with rich international ingredients.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- General Grocery -->
+        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
+          <img src="./photo/milk eggs juice.jpeg" alt="Everyday Grocery Essentials"
+            style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <div class="service-icon"><i class="fas fa-shopping-basket"></i></div>
+            <h3 class="service-title">General Grocery Essentials</h3>
+            <p class="service-desc">Milk, eggs, dairy, pantry staples, canned goods, snacks, frozen items, household
+              supplies, and everyday essentials for your home.</p>
+          </div>
+        </div>
+
+        <!-- BuzzBallz -->
+        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
+          <img src="./photo/Beverages/buzzball.png" alt="BuzzBallz Ready-to-Drink Cocktails"
+            style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <div class="service-icon"><i class="fas fa-cocktail"></i></div>
+            <h3 class="service-title">BuzzBallz &amp; Ready-to-Drink</h3>
+            <p class="service-desc">Shop our selection of BuzzBallz and convenient ready-to-drink cocktails, chilled and
+              ready for your next gathering or night out.</p>
+          </div>
+        </div>
+
+        <!-- Beer -->
+        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
+          <img src="./photo/Beverages/hard drinks.png" alt="Chilled Beer Selection"
+            style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <div class="service-icon"><i class="fas fa-beer"></i></div>
+            <h3 class="service-title">Ice-Cold Beer</h3>
+            <p class="service-desc">A convenient selection of domestic favorites, craft options, and other chilled beer
+              choices kept cold and ready to go.</p>
+          </div>
+        </div>
+
+        <!-- Wine -->
+        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
+          <img src="./photo/wine.jpeg" alt="Wine and Chilled Beverage Selection"
+            style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <div class="service-icon"><i class="fas fa-wine-glass-alt"></i></div>
+            <h3 class="service-title">Wine Selection</h3>
+            <p class="service-desc">Browse a convenient selection of wines for dinners, celebrations, weekend
+              gatherings, and everyday occasions.</p>
+          </div>
+        </div>
+
+        <!-- Cold Beverages -->
+        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
+          <img src="./photo/Beverages/cold drinks.png" alt="Cold Beverages and Energy Drinks"
+            style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <div class="service-icon"><i class="fas fa-glass-water"></i></div>
+            <h3 class="service-title">Ice-Cold Beverages</h3>
+            <p class="service-desc">Cold sodas, energy drinks, water, juices, tea, and refreshing beverages including
+              popular grab-and-go favorites.</p>
+          </div>
+        </div>
+
+        <!-- Lottery -->
+        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
+          <img src="./photo/Services/lotto.png" alt="Texas Lottery and Scratchers"
+            style="width: 100%; height: 160px; object-fit: cover;">
+          <div style="padding: 1.5rem;">
+            <div class="service-icon"><i class="fas fa-coins"></i></div>
+            <h3 class="service-title">Texas Lottery &amp; Scratchers</h3>
+            <p class="service-desc">Texas Lottery tickets and scratch-offs, including popular draw games such as Mega
+              Millions and Powerball.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Hero Section -->
     <section id="hero">
@@ -278,91 +320,6 @@
           </div>
           <div class="collage-photo photo-3">
             <img src="./photo/Beverages/buzzball.png" alt="BuzzBallz selection inside Vista Food Mart">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services / Highlights Section -->
-    <section id="services" class="glass-card"
-      style="border-radius: 0; border-left: none; border-right: none; margin-bottom: 3rem;">
-      <div class="section-header">
-        <span class="section-subtitle">What We Offer</span>
-        <h2 class="section-title">Your One-Stop Neighborhood Shop</h2>
-        <p class="section-desc">We stock a clean, organized space with everything you need, matching high-quality local
-          essentials with rich international ingredients.</p>
-      </div>
-
-      <div class="services-grid">
-        <!-- General Grocery -->
-        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
-          <img src="./photo/Grocery/milk eggs.png" alt="Everyday Grocery Essentials"
-            style="width: 100%; height: 160px; object-fit: cover;">
-          <div style="padding: 1.5rem;">
-            <div class="service-icon"><i class="fas fa-shopping-basket"></i></div>
-            <h3 class="service-title">General Grocery Essentials</h3>
-            <p class="service-desc">Milk, eggs, dairy, pantry staples, canned goods, snacks, frozen items, household
-              supplies, and everyday essentials for your home.</p>
-          </div>
-        </div>
-
-        <!-- BuzzBallz -->
-        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
-          <img src="./photo/Beverages/buzzball.png" alt="BuzzBallz Ready-to-Drink Cocktails"
-            style="width: 100%; height: 160px; object-fit: cover;">
-          <div style="padding: 1.5rem;">
-            <div class="service-icon"><i class="fas fa-cocktail"></i></div>
-            <h3 class="service-title">BuzzBallz &amp; Ready-to-Drink</h3>
-            <p class="service-desc">Shop our selection of BuzzBallz and convenient ready-to-drink cocktails, chilled and
-              ready for your next gathering or night out.</p>
-          </div>
-        </div>
-
-        <!-- Beer -->
-        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
-          <img src="./photo/Beverages/hard drinks.png" alt="Chilled Beer Selection"
-            style="width: 100%; height: 160px; object-fit: cover;">
-          <div style="padding: 1.5rem;">
-            <div class="service-icon"><i class="fas fa-beer"></i></div>
-            <h3 class="service-title">Ice-Cold Beer</h3>
-            <p class="service-desc">A convenient selection of domestic favorites, craft options, and other chilled beer
-              choices kept cold and ready to go.</p>
-          </div>
-        </div>
-
-        <!-- Wine -->
-        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
-          <img src="./photo/Beverages/hard2.png" alt="Wine and Chilled Beverage Selection"
-            style="width: 100%; height: 160px; object-fit: cover;">
-          <div style="padding: 1.5rem;">
-            <div class="service-icon"><i class="fas fa-wine-glass-alt"></i></div>
-            <h3 class="service-title">Wine Selection</h3>
-            <p class="service-desc">Browse a convenient selection of wines for dinners, celebrations, weekend
-              gatherings, and everyday occasions.</p>
-          </div>
-        </div>
-
-        <!-- Cold Beverages -->
-        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
-          <img src="./photo/Beverages/cold drinks.png" alt="Cold Beverages and Energy Drinks"
-            style="width: 100%; height: 160px; object-fit: cover;">
-          <div style="padding: 1.5rem;">
-            <div class="service-icon"><i class="fas fa-glass-water"></i></div>
-            <h3 class="service-title">Ice-Cold Beverages</h3>
-            <p class="service-desc">Cold sodas, energy drinks, water, juices, tea, and refreshing beverages including
-              popular grab-and-go favorites.</p>
-          </div>
-        </div>
-
-        <!-- Lottery -->
-        <div class="service-card glass-card" style="overflow: hidden; padding: 0;">
-          <img src="./photo/Services/lotto.png" alt="Texas Lottery and Scratchers"
-            style="width: 100%; height: 160px; object-fit: cover;">
-          <div style="padding: 1.5rem;">
-            <div class="service-icon"><i class="fas fa-coins"></i></div>
-            <h3 class="service-title">Texas Lottery &amp; Scratchers</h3>
-            <p class="service-desc">Texas Lottery tickets and scratch-offs, including popular draw games such as Mega
-              Millions and Powerball.</p>
           </div>
         </div>
       </div>
